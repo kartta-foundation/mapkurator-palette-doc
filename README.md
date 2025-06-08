@@ -50,5 +50,7 @@ python run_img.py --map_kurator_system_dir /home/mapkurator-system/ --input_dir_
 ```
 
 To run the **Chinese** model:
+```
 python run_img.py --map_kurator_system_dir /home/mapkurator-system/ --input_dir_path /home/mapkurator-test-images/input/ --expt_name mapKurator_test --module_cropping --module_get_dimension --module_text_spotting --text_spotting_model_dir /home/spotter-palette/PALETTE --spotter_model palette --spotter_config /home/spotter-palette/PALETTE/configs/palette-test-tc.yaml --spotter_expt_name chinese --module_img_geojson --output_folder /home/mapkurator-test-images/output/ --gpu_id 0
+```
 
