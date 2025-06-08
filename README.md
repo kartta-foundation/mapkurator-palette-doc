@@ -17,19 +17,38 @@ docker login -u karttafoundation
 
 ### Step 1: Pull docker image 
 
-First pull the docker image with the following command - ```docker pull karttafoundation/spotting_2023:palette-multi```
-Then run the container with - 
+First pull the docker image with the following command:
+
+```docker pull karttafoundation/spotting_2023:palette-multi```
+
+Then run the container:
 ```
-docker run -it --name YOUR_CONTAINER_NAME --gpus all -v /PATH/TO/INPUT/FOLDER/ON/HOST_MACHINE:/home/mapkurator-test-images/input/ -v /PATH/TO/OUTPUT/FOLDER/ON/HOST_MACHINE:/home/mapkurator-test-images/output/  knowledgecomputing/mapkurator_recogito_2023 
+docker run -it --name YOUR_CONTAINER_NAME --gpus all -v /PATH/TO/INPUT/FOLDER/ON/HOST_MACHINE:/home/mapkurator-test-images/input/ -v /PATH/TO/OUTPUT/FOLDER/ON/HOST_MACHINE:/home/mapkurator-test-images/output/  karttafoundation/spotting_2023:palette-multi
 ```
+
 Inside the container, run `conda activate mapKurator` to activate the mapkurator environment. 
 
 **NOTE**: 
 1) Remember to change `/PATH/TO/INPUT/FOLDER/ON/HOST_MACHINE` and `/PATH/TO/OUTPUT/FOLDER/ON/HOST_MACHINE` in the above command to two actual directory paths on your host machine. 
 2) The -v option in the command above gives your docker container access to the folders on host machine. More documentation can be found at this [link](https://docs.docker.com/storage/volumes/)
 
-Then refer to this "**How to Use**" guide [link](https://knowledge-computing.github.io/mapkurator-doc/#/docs/how-to-use-1). Ensure that you place any test images in the /PATH/TO/INPUT/FOLDER/ON/HOST_MACHINE mentioned above. The docker image comes with two spotting modules which can be found in the /home directory. These are spotter-v2 and spotter_testr. 
 
 ### Step 2: Run commands 
+Place any test images in the /PATH/TO/INPUT/FOLDER/ON/HOST_MACHINE mentioned above.
 
+To run mapKurator from the docker image, first change directory as -     
+```
+cd /home/mapkurator-system/
+```
+
+Then you can run spotting on the test images.     
+
+
+To run the **English** model:
+```
+python run_img.py --map_kurator_system_dir /home/mapkurator-system/ --input_dir_path /home/mapkurator-test-images/input/ --expt_name mapKurator_test --module_cropping --module_get_dimension --module_text_spotting --text_spotting_model_dir /home/spotter-palette/PALETTE --spotter_model palette --spotter_config /home/spotter-palette/PALETTE/configs/palette-test.yaml --spotter_expt_name english --module_img_geojson --output_folder /home/mapkurator-test-images/output/ --gpu_id 0
+```
+
+To run the **Chinese** model:
+python run_img.py --map_kurator_system_dir /home/mapkurator-system/ --input_dir_path /home/mapkurator-test-images/input/ --expt_name mapKurator_test --module_cropping --module_get_dimension --module_text_spotting --text_spotting_model_dir /home/spotter-palette/PALETTE --spotter_model palette --spotter_config /home/spotter-palette/PALETTE/configs/palette-test-tc.yaml --spotter_expt_name chinese --module_img_geojson --output_folder /home/mapkurator-test-images/output/ --gpu_id 0
 
