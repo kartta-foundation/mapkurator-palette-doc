@@ -1,0 +1,1 @@
+# mapkurator-palette-doc
