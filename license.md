@@ -1,4 +1,4 @@
-#Kartta Foundation's Palette Pre-trained Model License (modified from PolyForm Noncommercial License 1.0.0)
+## Kartta Foundation's Palette Pre-trained Model License (modified from PolyForm Noncommercial License 1.0.0)
 
 <https://polyformproject.org/licenses/noncommercial/1.0.0>
 
@@ -34,7 +34,7 @@ Other organizations may use and modify the Pre-trained Palette Model for **Own U
 
 ### 3.3 Third-Party Use
 
-Requires selection of **Professional** or **Enterprise Tier**. Not permitted under Community Tier.
+Requires selection of **Professional**. Not permitted under Community Tier.
 
 ## 4. Modification and Distribution
 
