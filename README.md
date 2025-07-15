@@ -57,11 +57,11 @@ python run_img.py --map_kurator_system_dir /home/mapkurator-system/ --input_dir_
 ```
 
 
-## 🔗 References
+## 📖 Citation
 
-If you find this repository useful in your own work, we would appreciate a citation to the accompanying paper:
+If you find this repository useful, please cite the following works:
 
-```
+```bibtex
 @inproceedings{lin2024hyper,
   title={Hyper-local deformable transformers for text spotting on historical maps},
   author={Lin, Yijun and Chiang, Yao-Yi},
@@ -69,8 +69,7 @@ If you find this repository useful in your own work, we would appreciate a citat
   pages={5387--5397},
   year={2024}
 }
-```
-```
+
 @inproceedings{kim2023mapkurator,
   title={The mapKurator System: A Complete Pipeline for Extracting and Linking Text from Historical Maps},
   author={Kim, Jina and Li, Zekun and Lin, Yijun and Namgung, Min and Jang, Leeje and Chiang, Yao-Yi},
@@ -78,6 +77,3 @@ If you find this repository useful in your own work, we would appreciate a citat
   pages={1--4},
   year={2023}
 }
-```
-
-
