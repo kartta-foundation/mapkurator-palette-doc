@@ -1,6 +1,8 @@
 
 The *mapKurator-system* requires that *cuda_11.3*, along with *cudnn* and *nvidia-smi*, is properly installed and functional on the host operating system. For successful installation, it is recommended to use *cuda_11.3-devel*. You can learn more [here](https://github.com/NVIDIA/nvidia-docker/wiki/CUDA).
 
+## 📁 mapKurator Instructions
+
 Note that *cuda_11.3* officially supports only *Ubuntu 20.04* and earlier at the time this document was created.
 
 ### Step 0: Log in to DockerHub
@@ -49,6 +51,12 @@ To run the **English** model:
 python run_img.py --map_kurator_system_dir /home/mapkurator-system/ --input_dir_path /home/mapkurator-test-images/input/ --expt_name mapKurator_test --module_cropping --module_get_dimension --module_text_spotting --text_spotting_model_dir /home/spotter-palette/PALETTE --spotter_model palette --spotter_config /home/spotter-palette/PALETTE/configs/palette-test.yaml --spotter_expt_name english --module_img_geojson --output_folder /home/mapkurator-test-images/output/ --gpu_id 0
 ```
 
+To run the **Chinese** model:
+```
+python run_img.py --map_kurator_system_dir /home/mapkurator-system/ --input_dir_path /home/mapkurator-test-images/input/ --expt_name mapKurator_test --module_cropping --module_get_dimension --module_text_spotting --text_spotting_model_dir /home/spotter-palette/PALETTE --spotter_model palette --spotter_config /home/spotter-palette/PALETTE/configs/palette-test-tc.yaml --spotter_expt_name chinese --module_img_geojson --output_folder /home/mapkurator-test-images/output/ --gpu_id 0
+```
+
+
 ## 🔗 References
 
 If you find this repository useful in your own work, we would appreciate a citation to the accompanying paper:
@@ -72,10 +80,4 @@ If you find this repository useful in your own work, we would appreciate a citat
 }
 ```
 
-
-
-To run the **Chinese** model:
-```
-python run_img.py --map_kurator_system_dir /home/mapkurator-system/ --input_dir_path /home/mapkurator-test-images/input/ --expt_name mapKurator_test --module_cropping --module_get_dimension --module_text_spotting --text_spotting_model_dir /home/spotter-palette/PALETTE --spotter_model palette --spotter_config /home/spotter-palette/PALETTE/configs/palette-test-tc.yaml --spotter_expt_name chinese --module_img_geojson --output_folder /home/mapkurator-test-images/output/ --gpu_id 0
-```
 
