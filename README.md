@@ -49,6 +49,31 @@ To run the **English** model:
 python run_img.py --map_kurator_system_dir /home/mapkurator-system/ --input_dir_path /home/mapkurator-test-images/input/ --expt_name mapKurator_test --module_cropping --module_get_dimension --module_text_spotting --text_spotting_model_dir /home/spotter-palette/PALETTE --spotter_model palette --spotter_config /home/spotter-palette/PALETTE/configs/palette-test.yaml --spotter_expt_name english --module_img_geojson --output_folder /home/mapkurator-test-images/output/ --gpu_id 0
 ```
 
+## 🔗 References
+
+If you find this repository useful in your own work, we would appreciate a citation to the accompanying paper:
+
+```
+@inproceedings{lin2024hyper,
+  title={Hyper-local deformable transformers for text spotting on historical maps},
+  author={Lin, Yijun and Chiang, Yao-Yi},
+  booktitle={Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining},
+  pages={5387--5397},
+  year={2024}
+}
+```
+```
+@inproceedings{kim2023mapkurator,
+  title={The mapKurator System: A Complete Pipeline for Extracting and Linking Text from Historical Maps},
+  author={Kim, Jina and Li, Zekun and Lin, Yijun and Namgung, Min and Jang, Leeje and Chiang, Yao-Yi},
+  booktitle={Proceedings of the 31st ACM International Conference on Advances in Geographic Information Systems},
+  pages={1--4},
+  year={2023}
+}
+```
+
+
+
 To run the **Chinese** model:
 ```
 python run_img.py --map_kurator_system_dir /home/mapkurator-system/ --input_dir_path /home/mapkurator-test-images/input/ --expt_name mapKurator_test --module_cropping --module_get_dimension --module_text_spotting --text_spotting_model_dir /home/spotter-palette/PALETTE --spotter_model palette --spotter_config /home/spotter-palette/PALETTE/configs/palette-test-tc.yaml --spotter_expt_name chinese --module_img_geojson --output_folder /home/mapkurator-test-images/output/ --gpu_id 0
